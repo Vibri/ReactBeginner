@@ -1,18 +1,16 @@
-<!-- INSERT BOILER PLATE CODE-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="author" content="Viktor Mikulášek">
     <!-- REACT LIBRARY-->
     <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
     <!-- REACT DOM LIBRARY-->
     <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
     <!-- BABEL LIBRARY-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
-    <title>Let's React!</title>
+    <title>Class Components</title>
 </head>
 <body>
     <!-- DESIGNATED LOCATION TO INSERT REACT CONTENT -->
@@ -21,26 +19,37 @@
     <!-- JAVASCRIPT -->
     <script type="text/babel">
 
-        // OUR FIRST STATELESS FUNCTIONAL COMPONENT
-        // COMPONENT IS CAPITALIZED
-        // ONE RETURN STATEMENT
-        var ColorSpectrum = function() {
-            return(
-                <h1>Red, Orange, Yellow, Green, Blue, Indigo, Violet</h1>
-            );
+        // OUR FIRST CLASS COMPONENT
+        class Shapes extends React.Component {
+            render() {
+                return(
+                    <h1>Circle, Square, Rectangle</h1>
+                )
+            }
         }
 
-        var Red = function() {
-            return(
-                <h1>Red</h1>
-            );
+        class Circle extends React.Component {
+            render() {
+                return(
+                    <h1>Circle</h1>
+                )
+            }
+        }
+
+        class Square extends React.Component {
+            render() {
+                return(
+                    <h1>Square</h1>
+                )
+            }
         }
 
     // RENDER REACT TO  THE DOM - WILL ACCEPT TWO ARGUMENTS (REACT WHAT, REACT WHERE)
         ReactDOM.render(
             // REACT WHAT - JSX
             <div>
-                <Red/>    
+                <Circle/>
+                <Square/>
             </div>
             ,
             // REACT WHERE - DIV WITH ID "APP"
